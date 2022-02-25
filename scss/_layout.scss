@@ -1,0 +1,182 @@
+/* Variables Layout */
+
+// Padding/Margin
+$p1: 0.5rem;
+$p2: 1rem;
+$p3: 1.5rem;
+$p4: 2rem;
+$p5: 3rem;
+
+// Font Size
+$font1: 1rem;
+$font2: 1.25rem;
+$font3: 1.5rem;
+$font4: 2rem;
+$font5: 3rem;
+$font6: 4rem;
+$font7: 5rem;
+
+/* Layout Generales */
+
+// Botones
+.btn{
+    height: 1.5rem;
+    padding: $p1;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+    transition: border-color 0.2s ease;
+}
+
+// Imagenes
+.contain{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.cover{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Layout Secciones Generales*/
+
+// Header
+.page-header{
+    position: fixed;
+    height: 5rem;
+    width: 100%;
+    padding: $p1 $p3; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-bar{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav-logo{
+        height: 100%;
+        width: auto;
+        .logo-wrap{
+            height: 100%;
+            width: auto;
+        }
+    }
+    .nav-menu{
+        font-size: 1rem;
+        display: none;
+        .nav-li{
+            display: inline;
+            padding: 0 $p1;
+        }
+    }
+}
+.header-btn{
+    display: none;
+    gap: $p2;
+}
+
+// Footer
+.page-footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .footer-btn{
+        padding: $p2;
+        display: flex;
+        justify-content: center;
+        gap: $p2;
+        a{
+            display: flex;
+            align-items: center;
+            padding: $p1;
+        }
+    }
+    .footer-txt{
+        padding: $p2;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Layout Secciones de Pagina*/
+
+// Index
+
+.hero{
+    height: 100vh;
+    width: 100vw;
+    .hero-container{
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        .hero-txt{
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1{
+                font-size: $font6;
+            }
+            p{
+                font-size: $font3;
+                padding: $p3 0;
+            }
+            button + button{
+                margin-left: $p2;
+            }
+        }
+        .hero-img{
+            flex-basis: 1;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: flex-end;
+            .hero-img-wrap{
+                height: 80%;
+                width: auto;
+            }
+        }
+    }
+}
+
+/* Media Queries */
+
+// Navbar
+@media only screen and (min-width: 992px) {
+    .header{
+        .nav-bar{
+            flex: none;
+            .nav-menu{
+                display: flex;
+            }
+            .nav-btn{
+                display: none;
+            }
+        }
+        .header-btn{
+            display: flex;
+        }
+    }
+}
+
+// Index
+@media only screen and (min-width: 992px) {
+    .hero{
+        .hero-container{
+            .hero-img{
+                display: flex;
+            }
+        }
+    }
+}

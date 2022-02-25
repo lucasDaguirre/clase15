@@ -1,0 +1,259 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+a, button {
+  all: unset;
+  cursor: pointer;
+}
+
+svg {
+  display: block;
+}
+
+/* Variables Layout */
+/* Layout Generales */
+.btn {
+  height: 1.5rem;
+  padding: 0.5rem;
+  border: 2px solid;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.contain {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Layout Secciones Generales*/
+.page-header {
+  position: fixed;
+  height: 5rem;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-bar .nav-logo {
+  height: 100%;
+  width: auto;
+}
+.nav-bar .nav-logo .logo-wrap {
+  height: 100%;
+  width: auto;
+}
+.nav-bar .nav-menu {
+  font-size: 1rem;
+  display: none;
+}
+.nav-bar .nav-menu .nav-li {
+  display: inline;
+  padding: 0 0.5rem;
+}
+
+.header-btn {
+  display: none;
+  gap: 1rem;
+}
+
+.page-footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page-footer .footer-btn {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.page-footer .footer-btn a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.page-footer .footer-txt {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Layout Secciones de Pagina*/
+.hero {
+  height: 100vh;
+  width: 100vw;
+}
+.hero .hero-container {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.hero .hero-container .hero-txt {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero .hero-container .hero-txt h1 {
+  font-size: 4rem;
+}
+.hero .hero-container .hero-txt p {
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+}
+.hero .hero-container .hero-txt button + button {
+  margin-left: 1rem;
+}
+.hero .hero-container .hero-img {
+  flex-basis: 1;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: flex-end;
+}
+.hero .hero-container .hero-img .hero-img-wrap {
+  height: 80%;
+  width: auto;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 992px) {
+  .header .nav-bar {
+    flex: none;
+  }
+  .header .nav-bar .nav-menu {
+    display: flex;
+  }
+  .header .nav-bar .nav-btn {
+    display: none;
+  }
+  .header .header-btn {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero .hero-container .hero-img {
+    display: flex;
+  }
+}
+/* Variables Colores */
+/* Colores de Elementos Generales*/
+.btn-primary {
+  color: #f4f4f4;
+  border-color: #ed01ed;
+  background-color: #ed01ed;
+}
+.btn-primary:hover {
+  color: #ed01ed;
+  border-color: #f4f4f4;
+  background-color: #f4f4f4;
+}
+
+.btn-secondary {
+  color: #f4f4f4;
+  border-color: #f4f4f4;
+}
+.btn-secondary:hover {
+  color: #ed01ed;
+  border-color: #f4f4f4;
+  background-color: #f4f4f4;
+}
+
+/* Colores de Secciones Generales*/
+body {
+  background-image: linear-gradient(180deg, #8e37a4 0%, #141845 100%);
+}
+
+.page-header {
+  background-color: rgba(11, 11, 11, 0.25);
+  color: #f4f4f4;
+}
+.page-header .nav-bar .nav-menu .nav-ul .nav-li:hover {
+  opacity: 0.5;
+}
+
+.footer {
+  background-color: #ed01ed;
+  color: #f4f4f4;
+}
+
+/* Colores de Secciones de Pagina*/
+.hero .hero-container .hero-txt h1 {
+  color: #f4f4f4;
+}
+.hero .hero-container .hero-txt p {
+  color: #f4f4f4;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

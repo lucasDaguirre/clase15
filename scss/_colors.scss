@@ -1,0 +1,84 @@
+/* Variables Colores */
+
+// Colores
+$colorPrimary: rgb(237, 1, 237);
+$white: rgb(244, 244, 244);
+$black: rgb(11, 11, 11);
+// Colores con Transparencia
+$black75: rgba(11, 11, 11, 0.750);
+$black50: rgba(11, 11, 11, 0.500);
+$black25: rgba(11, 11, 11, 0.250);
+// Gradientes
+$gradientPrimary: linear-gradient(180deg, #8e37a4 0%, #141845 100%);
+
+/* Colores de Elementos Generales*/
+
+// Botones 
+
+.btn-primary{
+    color: $white;
+    border-color: $colorPrimary;
+    background-color: $colorPrimary;
+    &:hover{
+        color: $colorPrimary;
+        border-color: $white;
+        background-color: $white;
+    }
+}
+
+.btn-secondary{
+    color: $white;
+    border-color: $white;
+    &:hover{
+        color: $colorPrimary;
+        border-color: $white;
+        background-color: $white;
+    }  
+}
+
+/* Colores de Secciones Generales*/
+
+// Body
+
+body{
+    background-image: $gradientPrimary;
+}
+
+// Header
+.page-header{
+    background-color: $black25;
+    color: $white;
+    .nav-bar{
+        .nav-menu{
+            .nav-ul{
+                .nav-li{
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Footer
+.footer{
+    background-color: $colorPrimary;
+    color: $white;
+}
+
+/* Colores de Secciones de Pagina*/
+
+// Index
+.hero{
+    .hero-container{
+        .hero-txt{
+            h1{
+                color: $white;
+            }
+            p{
+                color: $white;
+            }
+        }
+    }
+}
